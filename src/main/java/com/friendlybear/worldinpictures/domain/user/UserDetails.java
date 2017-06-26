@@ -3,8 +3,10 @@ package com.friendlybear.worldinpictures.domain.user;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -24,6 +26,8 @@ public class UserDetails implements Serializable {
     private String lastName;
 
     @Getter
+    @NotNull
+    @NotEmpty
     private String eMail;
 
     @Getter
