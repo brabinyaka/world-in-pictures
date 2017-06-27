@@ -4,6 +4,8 @@ import com.friendlybear.worldinpictures.domain.user.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Spring REST repository for user
  * <p>
@@ -15,4 +17,6 @@ public interface UserRepository extends CrudRepository<User, Long> {
     User findUserById(long id);
 
     User findUserByUsername(String username);
+
+    List<User> findAll();
 }
