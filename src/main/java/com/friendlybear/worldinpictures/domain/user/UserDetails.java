@@ -1,5 +1,6 @@
 package com.friendlybear.worldinpictures.domain.user;
 
+import com.friendlybear.worldinpictures.validate.ValidEmail;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,7 @@ public class UserDetails implements Serializable {
     @Getter
     @NotNull
     @NotEmpty
+    @ValidEmail
     private String eMail;
 
     @Getter
